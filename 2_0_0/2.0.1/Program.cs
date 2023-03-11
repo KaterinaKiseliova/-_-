@@ -2,8 +2,11 @@
 //на вход трёхзначное число и на выходе
 //показывает последнюю цифру этого числа.
 Console.WriteLine("Введите ваше число");
-int num = new Random().Next(100, 1000);
-
+int TakeNum(int num)
+{
 Console.WriteLine(num);
-Console.WriteLine(num % 10);
+return num % 10;
+}
 
+int result = TakeNum(new Random().Next(100,1000));
+Console.WriteLine(result);
