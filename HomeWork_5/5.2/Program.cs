@@ -39,4 +39,4 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[] mass = MassNums(num, start, stop);
 Print(mass);
-Console.WriteLine(OddNumSum(arr_1));
+Console.WriteLine(OddNumSum);
