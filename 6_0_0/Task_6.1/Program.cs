@@ -1,8 +1,5 @@
-﻿
-// 2. Задайте одномерный массив, заполненный случайными числами.
-//    Найдите сумму элементов, стоящих на нечётных позициях. 
-
-
+﻿// Напишите программу, которая перевернёт одномерный 
+// массив ( последний элемент будет на первом месте, а первый - на последнем и т.д.)
 void Print(int[] arr)
 {
     int size = arr.Length;
@@ -23,14 +20,12 @@ int[] MassNums(int size, int from, int to)
     return arr;
 }
 
-int OddNumSum(int[] arr)
+void RevMas(int[] arr)
 {
-    int count = 0;
-
-    for (int i = 0; i < arr.Length; i += 2)    
-        count += arr[i];
+    int size = arr.Length;
+    for (int i = 0; i < size / 2; i ++)    
+        (arr[i], arr[size - i -  1]) = (arr[size - i -1], arr[i]);
     
-    return count;
 }
 
 int num = int.Parse(Console.ReadLine()!);
@@ -39,4 +34,5 @@ int stop = int.Parse(Console.ReadLine()!);
 
 int[] mass = MassNums(num, start, stop);
 Print(mass);
-Console.WriteLine(OddNumSum);
+RevMas(mass);
+Print(mass);
