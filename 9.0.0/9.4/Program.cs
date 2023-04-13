@@ -8,4 +8,3 @@ int Power(int A, int B)
 
 int A = int.Parse(Console.ReadLine()!);
 int B = int.Parse(Console.ReadLine()!);
-System.Console.Write(Power(A, B));
